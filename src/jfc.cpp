@@ -65,6 +65,12 @@ static void list_by_ext(const std::string &path_str, const std::string &ext) {
   }
 }
 
+// THIS IS FOR CHRIS *CREATE YOUR FUNCTION TEMPLE HERE *USE THE ONES I MADE
+// ABOVE AS REFERNCE
+//  Organize the files in the given directory in alphabetical order by name.
+
+// THIS IS FOR CHRIS *CREATE YOUR HELPER FUNCTION HERE LIKE THE ONES BELOW
+
 // Helper for full delete stuff
 int full_delete_png(const std::string &path_str) {
   return full_delete_ext(path_str, ".png");
