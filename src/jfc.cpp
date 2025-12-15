@@ -5,6 +5,7 @@
 #include <filesystem>
 #include <iostream>
 #include <thread>
+#include <algorithim>
 
 #include <string>
 namespace fs = std::filesystem;
@@ -68,6 +69,12 @@ static void list_by_ext(const std::string &path_str, const std::string &ext) {
 // THIS IS FOR CHRIS *CREATE YOUR FUNCTION TEMPLE HERE *USE THE ONES I MADE
 // ABOVE AS REFERNCE
 //  Organize the files in the given directory in alphabetical order by name.
+
+static std::vector<std::string> list_alpha_order(fileNames) {
+std::sort(fileNames.begin(), fileNames.end());
+}
+
+
 
 // THIS IS FOR CHRIS *CREATE YOUR HELPER FUNCTION HERE LIKE THE ONES BELOW
 
