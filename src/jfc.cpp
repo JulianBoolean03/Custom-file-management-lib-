@@ -70,11 +70,27 @@ static void list_by_ext(const std::string &path_str, const std::string &ext) {
 // ABOVE AS REFERNCE
 //  Organize the files in the given directory in alphabetical order by name.
 
-static std::vector<std::string> list_alpha_order(fileNames) {
-std::sort(fileNames.begin(), fileNames.end());
+static void sort_list_alpha_ext(constant std::string &path, const std::string &ext ( {
+static std::vector<std::string> list_alpha_order(const std::string& dirPath) 
+{
+  std::vector<std::string> fileNames;
+
+  try
+    { 
+      for (const auto& entry : fs::directory_iterator(dirPath))
+        {
+          if (entry.is_regular_files())
+          {
+            fileNames.push_back(entry.path().filename().string());
+     }
+  }
+}
+catch (const fs::filesystem_error& e) {
+std::cerr << "Caught exception: " << e.what() << std::endl;
 }
 
-
+std::sort(fileNames.begin(), fileNames.end());
+return fileNames;
 
 // THIS IS FOR CHRIS *CREATE YOUR HELPER FUNCTION HERE LIKE THE ONES BELOW
 
